@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
         if let detail = self.detailItem {
             if let imageView = self.detailImageView {
                 imageView.image = UIImage(named: detail)
+                self.title = detailItem
             }
         }
     }
@@ -35,7 +36,6 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.hidesBarsOnTap = true
-        self.title = detailItem
     }
     
     override func viewWillDisappear(animated: Bool) {
